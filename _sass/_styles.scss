@@ -2,3 +2,7 @@
 
 @import 'plugin';
 @import 'custom';
+
+// component specific styles
+// this is modular so anyone can do any part
+@import 'navbar';
