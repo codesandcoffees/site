@@ -69,3 +69,8 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+# Assets Pipeline
+assets:
+  sources:
+    - _assets/fonts
