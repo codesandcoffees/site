@@ -3,7 +3,10 @@
 @import 'plugin';
 @import 'custom';
 
+// assets
+@import 'owl-carousel';
+
 // component specific styles
 // this is modular so anyone can do any part
 @import 'navbar';
-
+@import 'team';
