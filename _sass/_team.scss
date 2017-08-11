@@ -3,5 +3,11 @@
         img {
             border-radius: 0px !important;
         }
+        .gray-text {
+            color: $coffee-plate;
+            &:hover {
+                color: $coffee-table;
+            }
+        }
     }
 }
