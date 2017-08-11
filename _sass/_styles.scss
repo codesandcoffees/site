@@ -10,3 +10,9 @@
 // this is modular so anyone can do any part
 @import 'navbar';
 @import 'team';
+@import 'footer';
+
+// begin global custom styles
+.center {
+    text-align: center !important;
+}
