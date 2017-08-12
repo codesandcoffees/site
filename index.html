@@ -29,7 +29,24 @@
     <script src="{{ site.url }}/js/plugin.js"></script>
     <script src="{{ site.url }}/js/theme.js"></script>
     <script src="{{ site.url }}/js/owl.carousel.min.js"></script>
+    <script src="{{ site.url }}/js/typed.min.js"></script>
     <script src="{{ site.url }}/js/custom.js"></script>
+
+    <script>
+	  document.addEventListener('DOMContentLoaded', function(){
+	      Typed.new('#type', {
+	        strings: [
+	        	"Web Development", 
+	        	"Web Design", 
+	        	"Lots of cramming..", 
+	        	"More cramming..", 
+	        	"Codes and Coffee."
+	        ],
+            backDelay: 900,
+            smartBackspace: true,
+	      });
+	  });
+	</script>
 
 </body>
 
