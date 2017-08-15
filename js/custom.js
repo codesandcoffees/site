@@ -7,11 +7,13 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                nav: true
+                nav: true,
+                stagePadding: 100,
             },
             600: {
                 items: 3,
-                nav: false
+                nav: false,
+                stagePadding: 100,
             },
             1000: {
                 items: 5,
