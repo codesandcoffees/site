@@ -1,0 +1,32 @@
+/* coffee logo
+$coffee-table: #263238;
+$coffee-plate: #9E9E9E;
+$coffee-mug: #FFFEFF;
+$coffee: #4E342E;
+$code-symbol: #E8D0AC; */
+
+@font-face{
+  font-family:"Mononoki-Regular";
+  src:url("fonts/mononoki/mononoki-Regular.eot?#iefix") format("embedded-opentype"),
+  url("fonts/mononoki/mononoki-Regular.woff2") format("woff2"),
+  url("fonts/mononoki/mononoki-Regular.woff") format("woff"),
+  url("fonts/mononoki/mononoki-Regular.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
+body {
+  background-color: #263238;
+  text-align: center;
+  color: white;
+  font-family: "Mononoki-Regular"
+}
+
+.container {
+  padding-top: 15%;
+}
+
+.text {
+  font-size: 25px;
+  padding-top: 2vh;
+}
