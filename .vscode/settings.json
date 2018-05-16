@@ -1,7 +1,2 @@
 // Place your settings in this file to overwrite default and user settings.
-{
-    "insertDateString.format": "YYYY-MM-DD hh:mm:ss +0800",
-    "search.exclude": {
-        "**/_site": true
-    }
-}
+{}
