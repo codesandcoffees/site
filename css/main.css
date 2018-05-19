@@ -5,14 +5,11 @@ $coffee-mug: #FFFEFF;
 $coffee: #4E342E;
 $code-symbol: #E8D0AC; */
 
-@font-face{
-  font-family:"Mononoki-Regular";
-  src:url("fonts/mononoki/mononoki-Regular.eot?#iefix") format("embedded-opentype"),
-  url("fonts/mononoki/mononoki-Regular.woff2") format("woff2"),
-  url("fonts/mononoki/mononoki-Regular.woff") format("woff"),
-  url("fonts/mononoki/mononoki-Regular.ttf") format("truetype");
-  font-weight:normal;
-  font-style:normal;
+@font-face {
+  font-family: "Mononoki-Regular";
+  src: url("../fonts/mononoki/mononoki-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/mononoki/mononoki-Regular.woff2") format("woff2"), url("../fonts/mononoki/mononoki-Regular.woff") format("woff"), url("../fonts/mononoki/mononoki-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -22,11 +19,95 @@ body {
   font-family: "Mononoki-Regular";
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  pointer-events: all;
+}
+
+a:hover {
+  border-bottom: 1px solid white;
+}
+
+.underline {
+  border-bottom: 1px solid white;
+}
+
 .container {
   padding-top: 24vh;
 }
 
-.text {
-  font-size: 25px;
-  padding-top: 2vh;
+.main-content {
+  width: 80%;
+  max-width: 950px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  text-shadow: none;
+  transition: all 0.5s ease-in-out, text-shadow 2s;
+  pointer-events: none;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.content {
+  opacity: 0;
+}
+
+.pages {
+  /* width: 100%; */
+  display: inline-flex;
+  /* table-layout: fixed; */
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.page {
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+  margin: 0 10px;
+}
+
+.page::before {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.page:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: 1.3em;
+  left: -50%;
+  width: 100%;
+  height: .4em;
+  z-index: -1;
+}
+
+.page::before {
+  background-color: #4e342e;
+  box-shadow: 0 0 3px 1px #fff;
+}
+
+.page--active::before {
+  background-color: #e7cfab;
+  box-shadow: 0 0 3px 1px #fff;
 }
