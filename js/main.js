@@ -49,7 +49,6 @@ hidePage = page => {
 createPagination = () => {
   let paginationContainer = document.getElementById('pages');
   for (var key in pages) {
-    console.log(key + " -> " + pages[key]);
     let page = document.createElement('span');
     page.className = 'page';
     page.setAttribute('id', key);
