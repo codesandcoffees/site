@@ -86,8 +86,8 @@ a:hover {
 .page::before {
   content: "";
   display: block;
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   border-radius: 50%;
   margin: 0 auto;
 }
