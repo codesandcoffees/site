@@ -8,7 +8,6 @@
   <meta name="author" content="https://github.com/codesandcoffee">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/animate.css">
   <link rel="shortcut icon" href="./img/favicon.ico">
   <title>codes and coffees</title>
   <script>
@@ -18,7 +17,6 @@
       }, i[r].l = 1 * new Date(); a = s.createElement(o),
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
     ga('create', 'UA-104484034-1', 'auto');
     ga('send', 'pageview');
   </script>
@@ -26,120 +24,48 @@
 
 
 <body>
-  <section class="buttons">
-    <!-- <button onclick=goTo(-1) id="prev">Prev</button>
-    <button onclick=goTo(1) id="next">Next</button> -->
-
-    <span class="pages">
-      <span class="page page--active"></span>
-      <span class="page"></span>
-      <span class="page"></span>
-    </span>
-
-  </section>
-  <section class="content brand animated">
-    <div class="main-content">
-      <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" id="scene">
-        <!-- <g>
+  <div class="container">
+    <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" id="scene">
+      <!-- <g>
        <title>background</title>
        <rect fill="#263238" id="canvas_background" height="302" width="302" y="-1" x="-1"/>
        <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
         <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
        </g>
       </g> -->
+      <g>
+        <!-- table -->
+        <rect data-depth="0.2" stroke="#263238" id="svg_25" height="292" width="292" y="4" x="4" fill-opacity="0" stroke-width="8"
+          fill="#263238" />
+        <!-- coaster -->
+        <ellipse stroke="#9e9e9e" transform="rotate(-0.3845353126525879 149,149.99998474120935) " ry="148.93252" rx="147.93964" id="svg_3"
+          cy="149.99999" cx="149.00001" stroke-width="1.5" fill="#9e9e9e" />
+        <!-- mug -->
+        <ellipse stroke="#ffffff" ry="101.99999" rx="101.99999" id="svg_5" cy="149.99999" cx="150" stroke-width="1.5" fill="#ffffff"
+        />
+        <!-- coffee -->
+        <ellipse stroke="#4e342e" ry="88.5" rx="88.5" id="svg_6" cy="150.00001" cx="150" stroke-width="1.5" fill="#4e342e" />
+        <!-- handle -->
+        <rect id="svg_7" height="14" width="37" y="143" x="21.5" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" />
+        <!-- code symbol-->
         <g>
-          <!-- table -->
-          <rect data-depth="0.2" stroke="#263238" id="svg_25" height="292" width="292" y="4" x="4" fill-opacity="0" stroke-width="8"
-            fill="#263238" />
-          <!-- coaster -->
-          <ellipse stroke="#9e9e9e" transform="rotate(-0.3845353126525879 149,149.99998474120935) " ry="148.93252" rx="147.93964" id="svg_3"
-            cy="149.99999" cx="149.00001" stroke-width="1.5" fill="#9e9e9e" />
-          <!-- mug -->
-          <ellipse stroke="#ffffff" ry="101.99999" rx="101.99999" id="svg_5" cy="149.99999" cx="150" stroke-width="1.5" fill="#ffffff"
-          />
-          <!-- coffee -->
-          <ellipse stroke="#4e342e" ry="88.5" rx="88.5" id="svg_6" cy="150.00001" cx="150" stroke-width="1.5" fill="#4e342e" />
-          <!-- handle -->
-          <rect id="svg_7" height="14" width="37" y="143" x="21.5" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" />
-          <!-- code symbol-->
-          <g>
-            <line stroke-width="8" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="151.35783" x2="84.63826" y1="122.49609"
-              x1="113.5" stroke="#e8d0ac" fill="none" />
-            <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="147.49609" x2="82.5" y1="179.49609" x1="114.5"
-              stroke-width="8" fill="none" />
-            <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="121.49609" x2="179.5" y1="153.49609"
-              x1="211.5" stroke-width="8" fill="none" />
-            <line stroke-width="8" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="179.35783" x2="179.63826" y1="150.49609"
-              x1="208.5" stroke="#e8d0ac" fill="none" />
-            <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="191.49609" x2="119.5" y1="111.49609"
-              x1="172.5" fill-opacity="0" stroke-width="8" fill="none" />
-          </g>
+          <line stroke-width="8" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="151.35783" x2="84.63826" y1="122.49609"
+            x1="113.5" stroke="#e8d0ac" fill="none" />
+          <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="147.49609" x2="82.5" y1="179.49609" x1="114.5"
+            stroke-width="8" fill="none" />
+          <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="121.49609" x2="179.5" y1="153.49609"
+            x1="211.5" stroke-width="8" fill="none" />
+          <line stroke-width="8" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="179.35783" x2="179.63826" y1="150.49609"
+            x1="208.5" stroke="#e8d0ac" fill="none" />
+          <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="191.49609" x2="119.5" y1="111.49609"
+            x1="172.5" fill-opacity="0" stroke-width="8" fill="none" />
         </g>
-      </svg>
-      <h1>codes and coffees</h1>
+      </g>
+    </svg>
+    <div class="text">
+      Trying out a new blend
     </div>
-  </section>
-  <section class="content projects animated">
-    <div class="main-content">
-      <h1>We create stuff from caffiene</h1>
-      <h3>List projects here</h3>
-    </div>
-  </section>
-  <section class="content tech animated">
-    <div class="main-content">
-      <h1>Using the latest and greatest tech</h1>
-      <h3>List used stacks here</h3>
-    </div>
-  </section>
+  </div>
 </body>
-
-<script>
-  let pages = {
-    1: 'brand',
-    2: 'projects',
-    3: 'tech'
-  };
-
-  let fromPage = 0;
-  let toPage = 1;
-
-  let showPage = () => {
-    document.getElementsByClassName(pages[toPage])[0].classList.add('show');
-    document.getElementsByClassName(pages[toPage])[0].classList.add('fadeIn');
-  }
-
-  let hidePage = () => {
-    document.getElementsByClassName(pages[fromPage])[0].classList.remove('show');
-    document.getElementsByClassName(pages[fromPage])[0].classList.add('fadeOut');
-    document.getElementsByClassName(pages[fromPage])[0].classList.remove('fadeIn');
-    setTimeout(function () {
-      document.getElementsByClassName(pages[fromPage])[0].classList.remove('fadeOut');
-    })
-  }
-
-  (function () {
-    showPage();
-  })();
-
-  let goTo = data => {
-    switch (data) {
-      case 1: // next
-        fromPage = toPage;
-        toPage = fromPage + 1;
-        break;
-      default: // prev
-        fromPage = toPage;
-        toPage = fromPage - 1;
-    }
-
-    hidePage();
-    showPage();
-  }
-
-  let prevBtn = document.getElementById('prev')
-  prevBtn.onClick = goTo;
-  let nextBtn = document.getElementById('next')
-  nextBtn.onClick = goTo;
-</script>
 
 </html>

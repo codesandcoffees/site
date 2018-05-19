@@ -5,14 +5,11 @@ $coffee-mug: #FFFEFF;
 $coffee: #4E342E;
 $code-symbol: #E8D0AC; */
 
-@font-face{
-  font-family:"Mononoki-Regular";
-  src:url("../fonts/mononoki/mononoki-Regular.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/mononoki/mononoki-Regular.woff2") format("woff2"),
-  url("../fonts/mononoki/mononoki-Regular.woff") format("woff"),
-  url("../fonts/mononoki/mononoki-Regular.ttf") format("truetype");
-  font-weight:normal;
-  font-style:normal;
+@font-face {
+  font-family: "Mononoki-Regular";
+  src: url("../fonts/mononoki/mononoki-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/mononoki/mononoki-Regular.woff2") format("woff2"), url("../fonts/mononoki/mononoki-Regular.woff") format("woff"), url("../fonts/mononoki/mononoki-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -22,10 +19,23 @@ body {
   font-family: "Mononoki-Regular";
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  pointer-events: all;
+}
+
+a:hover {
+  border-bottom: 1px solid white;
+}
+
+.underline {
+  border-bottom: 1px solid white;
+}
+
 .container {
   padding-top: 24vh;
 }
-
 
 .main-content {
   width: 80%;
@@ -60,10 +70,11 @@ body {
   margin: 0;
   font-size: 10px;
   position: absolute;
-  left:50%;
-  bottom: 0;
+  left: 50%;
+  bottom: 10px;
   transform: translate(-50%, -50%);
 }
+
 .page {
   display: table-cell;
   text-align: center;
@@ -71,6 +82,7 @@ body {
   position: relative;
   margin: 0 10px;
 }
+
 .page::before {
   content: "";
   display: block;
@@ -79,6 +91,7 @@ body {
   border-radius: 50%;
   margin: 0 auto;
 }
+
 .page:not(:first-child)::after {
   content: "";
   position: absolute;
@@ -88,12 +101,13 @@ body {
   height: .4em;
   z-index: -1;
 }
+
 .page::before {
   background-color: #4e342e;
-  box-shadow: 0 0 3px 1px #6a3;
+  box-shadow: 0 0 3px 1px #fff;
 }
 
 .page--active::before {
   background-color: #e7cfab;
-  box-shadow: 0 0 3px 1px #6a3;
+  box-shadow: 0 0 3px 1px #fff;
 }
