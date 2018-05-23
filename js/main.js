@@ -1,5 +1,5 @@
 
-let pages = {
+var pages = {
   1: 'brand',
   2: 'intro',
   3: 'projects',
@@ -8,35 +8,35 @@ let pages = {
 };
 
 // prev next pagination
-// let fromPage = 1;
-// let toPage = 1;
-let curPage = 1;
+// var fromPage = 1;
+// var toPage = 1;
+var curPage = 1;
 
-removeClass = (elem, name) => {
+function removeClass(elem, name) {
   elem.classList.remove(name);
 }
 
-addClass = (elem, name) => {
+function addClass(elem, name) {
   elem.classList.add(name);
 }
 
-let showPage = page => {
+function showPage(page) {
   // timeout to wait for the elems to be created first
   setTimeout(function () {
-    let activePage = document.getElementById(page);
+    var activePage = document.getElementById(page);
     addClass(activePage, 'page--active')
   })
 
-  let showElem = document.getElementsByClassName(pages[page])[0];
+  var showElem = document.getElementsByClassName(pages[page])[0];
   addClass(showElem, 'show')
   addClass(showElem, 'fadeIn')
 }
 
-hidePage = page => {
-  let inactivePage = document.getElementById(page);
+function hidePage(page) {
+  var inactivePage = document.getElementById(page);
   removeClass(inactivePage, 'page--active')
 
-  let hideElem = document.getElementsByClassName(pages[page])[0];
+  var hideElem = document.getElementsByClassName(pages[page])[0];
   removeClass(hideElem, 'show')
   addClass(hideElem, 'fadeOut')
   removeClass(hideElem, 'fadeIn')
@@ -46,10 +46,10 @@ hidePage = page => {
 }
 
 // dynamically create pagination
-createPagination = () => {
-  let paginationContainer = document.getElementById('pages');
+function createPagination() {
+  var paginationContainer = document.getElementById('pages');
   for (var key in pages) {
-    let page = document.createElement('span');
+    var page = document.createElement('span');
     page.className = 'page';
     page.setAttribute('id', key);
 
@@ -62,7 +62,7 @@ createPagination = () => {
   createPagination();
 })();
 
-goTo = (to, cur) => {
+function goTo(to, cur) {
   // prev next pagination
   // switch (data) {
   //   case 1: // next
@@ -79,14 +79,14 @@ goTo = (to, cur) => {
 }
 
 // prev next pagination
-// let prevBtn = document.getElementById('prev')
+// var prevBtn = document.getElementById('prev')
 // prevBtn.onClick = goTo;
-// let nextBtn = document.getElementById('next')
+// var nextBtn = document.getElementById('next')
 // nextBtn.onClick = goTo;
 
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('page')) {
-    let toId = +event.target.id; // convert to number
+    var toId = +event.target.id; // convert to number
     // if target page same is current page. do nothing
     if (toId === curPage) {
       return;
