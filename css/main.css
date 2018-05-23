@@ -1,22 +1,30 @@
-@font-face {
+/* @font-face {
   font-family: "Mononoki-Regular";
   src: url("../fonts/mononoki/mononoki-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/mononoki/mononoki-Regular.woff2") format("woff2"), url("../fonts/mononoki/mononoki-Regular.woff") format("woff"), url("../fonts/mononoki/mononoki-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
   background-color: #263238;
   text-align: center;
   color: white;
-  font-family: "Mononoki-Regular";
+  font-family: 'Varela Round';
+}
+
+* {
+  font-weight: 400;
 }
 
 a {
   color: white;
   text-decoration: none;
   pointer-events: all;
-  border-bottom: 1px solid white;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: #E8D0AC;
 }
 
 .brand-name {

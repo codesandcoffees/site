@@ -7,7 +7,9 @@
   <meta name="description" content="Fueled by caffeine" />
   <meta name="author" content="https://github.com/codesandcoffee">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animate.css">
   <link rel="shortcut icon" href="./img/favicon.ico">
   <title>codes and coffees</title>
   <script>
@@ -17,53 +19,70 @@
       }, i[r].l = 1 * new Date(); a = s.createElement(o),
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
     ga('create', 'UA-104484034-1', 'auto');
     ga('send', 'pageview');
   </script>
 </head>
 
-
 <body>
-  <div class="container">
-    <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" id="scene">
-      <!-- <g>
-       <title>background</title>
-       <rect fill="#263238" id="canvas_background" height="302" width="302" y="-1" x="-1"/>
-       <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-        <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-       </g>
-      </g> -->
-      <g>
-        <!-- table -->
-        <rect data-depth="0.2" stroke="#263238" id="svg_25" height="292" width="292" y="4" x="4" fill-opacity="0" stroke-width="8"
-          fill="#263238" />
-        <!-- coaster -->
-        <ellipse stroke="#9e9e9e" transform="rotate(-0.3845353126525879 149,149.99998474120935) " ry="148.93252" rx="147.93964" id="svg_3"
-          cy="149.99999" cx="149.00001" stroke-width="1.5" fill="#9e9e9e" />
-        <!-- mug -->
-        <ellipse stroke="#ffffff" ry="101.99999" rx="101.99999" id="svg_5" cy="149.99999" cx="150" stroke-width="1.5" fill="#ffffff"
-        />
-        <!-- coffee -->
-        <ellipse stroke="#4e342e" ry="88.5" rx="88.5" id="svg_6" cy="150.00001" cx="150" stroke-width="1.5" fill="#4e342e" />
-        <!-- handle -->
-        <rect id="svg_7" height="14" width="37" y="143" x="21.5" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" />
-        <!-- code symbol-->
+  <span class="pages" id="pages"></span>
+
+  <section class="content brand animated">
+    <div class="main-content">
+      <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" id="scene">
         <g>
-          <line stroke-width="8" stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="151.35783" x2="84.63826" y1="122.49609"
-            x1="113.5" stroke="#e8d0ac" fill="none" />
-          <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="147.49609" x2="82.5" y1="179.49609" x1="114.5"
-            stroke-width="8" fill="none" />
-          <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="121.49609" x2="179.5" y1="153.49609"
-            x1="211.5" stroke-width="8" fill="none" />
-          <line stroke-width="8" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="179.35783" x2="179.63826" y1="150.49609"
-            x1="208.5" stroke="#e8d0ac" fill="none" />
-          <line stroke="#e8d0ac" stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="191.49609" x2="119.5" y1="111.49609"
-            x1="172.5" fill-opacity="0" stroke-width="8" fill="none" />
+          <rect id="table" height="300" width="300" y="4" x="4" stroke-width="8" stroke="#263238" fill="#263238" />
+          <circle id="coaster" r="150" cy="150" cx="150" stroke-width="1" stroke="#9e9e9e" fill="#9e9e9e" />
+          <g>
+            <circle id="mug" r="100" cy="150" cx="150" stroke-width="1" stroke="#ffffff" fill="#ffffff" />
+            <rect id="handle" height="12" width="50" y="150" x="21.5" stroke-width="1" stroke="#ffffff" fill="#ffffff" />
+          </g>
+          <circle id="coffee" r="88" cy="150" cx="150" stroke-width="1" stroke="#4e342e" fill="#4e342e" />
+          <g id="code symbol">
+            <line id="symbol_u_l" stroke-linecap="null" stroke-linejoin="null" y2="151.35783" x2="84.63826" y1="122.49609" x1="113.5"
+              stroke-width="8" stroke="#e8d0ac" fill="none" />
+            <line id="symbol_u_r" stroke-linecap="null" stroke-linejoin="null" y2="121.49609" x2="179.5" y1="153.49609" x1="211.5" stroke-width="8"
+              stroke="#e8d0ac" fill="none" />
+            <line id="symbol_l_l" stroke-linecap="null" stroke-linejoin="null" y2="147.49609" x2="82.5" y1="179.49609" x1="114.5" stroke-width="8"
+              stroke="#e8d0ac" fill="none" />
+            <line id="symbol_l_r" stroke-linecap="null" stroke-linejoin="null" y2="179.35783" x2="179.63826" y1="150.49609" x1="208.5"
+              stroke-width="8" stroke="#e8d0ac" fill="none" />
+            <line id="symbol_slash" stroke-linecap="null" stroke-linejoin="null" y2="191.49609" x2="119.5" y1="111.49609" x1="172.5"
+              stroke-width="8" stroke="#e8d0ac" fill="none" />
+          </g>
         </g>
-      </g>
-    </svg>
-    <h2>Trying out a new blend</h2>
-  </div>
+      </svg>
+      <h1>Hello!</h1>
+    </div>
+  </section>
+  <section class="content intro animated">
+    <div class="main-content">
+      <h1>Here at <span class="brand-name">codes and coffees</span> we make stuff from caffeine</h1>
+    </div>
+  </section>
+  <section class="content projects animated">
+    <div class="main-content">
+      <h1>Our projects will be displayed here soon</h1>
+    </div>
+  </section>
+  <section class="content tech animated">
+    <div class="main-content">
+      <h1>And here will be the tech stack that we use</h1>
+    </div>
+  </section>
+  <section class="content random animated">
+    <div class="main-content">
+      <h1>Random text</h1>
+    </div>
+  </section>
+  <section class="content contact animated">
+    <div class="main-content">
+      <h2><a href="mailto:info@codesandcoffees.com">Say hello or send coffee :)</a></h2>
+    </div>
+  </section>
+  <script src="./js/main.js"></script>
 </body>
+
 
 </html>

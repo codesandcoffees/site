@@ -1,10 +1,10 @@
+
 let pages = {
   1: 'brand',
   2: 'intro',
   3: 'projects',
-  4: 'tech',
-  5: 'random',
-  6: 'contact'
+  // 4: 'tech',
+  5: 'contact'
 };
 
 // prev next pagination
