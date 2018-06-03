@@ -27,6 +27,10 @@ a:hover {
   color: #E8D0AC;
 }
 
+.pos-fixed {
+  position: fixed;
+}
+
 .brand-name {
   color: #E7CFAB;
 }
@@ -47,6 +51,10 @@ a:hover {
   pointer-events: none;
 }
 
+.main-content > h1 {
+  text-shadow: 3px 3px 9px #000;
+}
+
 .show {
   visibility: visible !important;
 }
@@ -56,6 +64,34 @@ a:hover {
   opacity: 0;
 }
 
+.projects-list {
+  grid-template-columns: 1fr 1fr;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: -10;
+  transition: all 0.5s ease-in-out;
+  margin-left: 10px; /* to compensate the scrollbar of the project l ist */
+}
+
+.project-item {
+  color: black;
+  height: 230px;
+  margin: 20px 30px;
+}
+
+.project-item:nth-child(odd) {
+  margin-left: 150px;
+}
+
+.project-item:nth-child(even) {
+  margin-right: 150px;
+}
+
+/* Pages */
 .pages {
   /* width: 100%; */
   display: inline-flex;
@@ -63,7 +99,7 @@ a:hover {
   padding: 0;
   margin: 0;
   font-size: 10px;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 10px;
   transform: translate(-50%, -50%);

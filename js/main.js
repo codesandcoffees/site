@@ -7,10 +7,16 @@ var pages = {
   5: 'contact'
 };
 
+var projectsList = [
+  { title: 'brewing...', url: '' },
+  { title: 'brewing...', url: '' },
+];
+
 // prev next pagination
 // var fromPage = 1;
 // var toPage = 1;
 var curPage = 1;
+var projectListElem = document.getElementsByClassName('projects-list')[0];
 
 function removeClass(elem, name) {
   elem.classList.remove(name);
@@ -26,6 +32,13 @@ function showPage(page) {
     var activePage = document.getElementById(page);
     addClass(activePage, 'page--active')
   })
+
+  // show/hide projects list since it not inside .main-content
+  if (page !== 3) {
+    projectListElem.style.display = 'none';
+  } else {
+    projectListElem.style.display = 'grid';
+  }
 
   var showElem = document.getElementsByClassName(pages[page])[0];
   addClass(showElem, 'show')
@@ -57,9 +70,29 @@ function createPagination() {
   }
 }
 
+function randomColor() {
+  var pastel = "hsl(" + 360 * Math.random() + ',' +
+    (25 + 70 * Math.random()) + '%,' +
+    (85 + 10 * Math.random()) + '%)';
+  return pastel;
+}
+
+function fillInProjectsList() {
+  for (var i = 0; i < projectsList.length; i++) {
+    var projItem = document.createElement('div');
+    projItem.className = 'project-item';
+    projItem.style.background = randomColor();
+    projItemTitle = document.createElement('h1');
+    projItemTitle.innerHTML = projectsList[i].title;
+    projItem.appendChild(projItemTitle);
+    projectListElem.appendChild(projItem);
+  }
+}
+
 (function () {
-  showPage(1);
+  showPage(1); //initial page to show
   createPagination();
+  fillInProjectsList();
 })();
 
 function goTo(to, cur) {
