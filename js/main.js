@@ -8,7 +8,7 @@ var pages = {
 };
 
 var projectsList = [
-  { title: 'brewing...', url: '' },
+  { title: 'AR Go', url: 'https://codesandcoffees.github.io/argo-site/' },
   { title: 'brewing...', url: '' },
 ];
 
