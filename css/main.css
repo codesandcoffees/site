@@ -74,21 +74,39 @@ a:hover {
   overflow-y: auto;
   z-index: -10;
   transition: all 0.5s ease-in-out;
-  margin-left: 10px; /* to compensate the scrollbar of the project l ist */
+  margin-left: 5px; /* to compensate the scrollbar of the project l ist */
+  justify-items: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  .projects-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-item {
   color: black;
   height: 230px;
+  max-width: 440px;
+  width: 100%;
   margin: 20px 30px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
 }
 
 .project-item:nth-child(odd) {
-  margin-left: 150px;
+  /* margin-left: 150px; */
+  /* margin-right: -80px; */
 }
 
 .project-item:nth-child(even) {
-  margin-right: 150px;
+  /* margin-right: 150px; */
+  /* margin-left: -80px; */
 }
 
 /* Pages */
