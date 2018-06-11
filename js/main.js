@@ -8,8 +8,8 @@ var pages = {
 };
 
 var projectsList = [
-  { title: 'AR Go', url: 'https://codesandcoffees.github.io/argo-site/' },
-  { title: 'brewing...', url: '' },
+  { title: 'AR Go', url: 'https://codesandcoffees.github.io/argo-site/', img: null },
+  { title: 'brewing...', url: null, img: null },
 ];
 
 // prev next pagination
@@ -80,12 +80,21 @@ function randomColor() {
 function fillInProjectsList() {
   for (var i = 0; i < projectsList.length; i++) {
     var projItem = document.createElement('div');
-    projItem.className = 'project-item';
-    projItem.style.background = randomColor();
-    projItemTitle = document.createElement('h1');
+    var projLink = document.createElement('a');
+    // if has img use it
+    if (projectsList[i].img) {
+      projLink.style.backgroundImage  = 'url(../img/' + projectsList[i].img + ')';
+    } else {
+      // else use random pastel color
+      projLink.style.background = randomColor();
+    }
+    projLink.className = 'project-item';
+    projLink.href = projectsList[i].url || 'javascript:void(0)';
+    projItemTitle = document.createElement('h2');
     projItemTitle.innerHTML = projectsList[i].title;
-    projItem.appendChild(projItemTitle);
-    projectListElem.appendChild(projItem);
+    projItemTitle.className = 'project-title';
+    projLink.appendChild(projItemTitle);
+    projectListElem.appendChild(projLink);
   }
 }
 
