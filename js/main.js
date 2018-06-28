@@ -101,7 +101,7 @@ function fillInProjectsList() {
 (function () {
   showPage(1); //initial page to show
   createPagination();
-  fillInProjectsList();
+  // fillInProjectsList();
 })();
 
 function goTo(to, cur) {
